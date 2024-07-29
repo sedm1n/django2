@@ -1,0 +1,17 @@
+{%extends "task1/menu.html"%}
+{% block title %} Магазин{% endblock %}
+{%block pagename%}
+{{pagename}}
+{%endblock pagename%}
+{% block content %}
+
+ <ul>
+ 
+ {%for good in goods %}
+     <li>{{good}}:  Cтоимость: {{good.cost}}      <button> купить</button></li> 
+     <p>Описание игры: {{good.description}}</p>
+ {%endfor%}
+</ul>
+<form action="/task1"><button>Вернуться обратно</button></form>
+
+{% endblock content%}
