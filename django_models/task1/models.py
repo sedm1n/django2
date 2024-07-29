@@ -21,4 +21,4 @@ class Games(models.Model):
       buyer = models.ManyToManyField(Buyer, related_name='buyer')
 
       def __str__(self) -> str:
-            return self.name
+            return self.title
